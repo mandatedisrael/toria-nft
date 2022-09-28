@@ -23,7 +23,7 @@ contract GrootNFT is ERC721URIStorage {
 
         _safeMint(msg.sender, newItemId);
 
-        _setTokenURI(newItemId, "https://jsonkeeper.com/b/AQ28");
+        _setTokenURI(newItemId, "https://jsonkeeper.com/b/FGBU");
 
         _tokenIds.increment();
 
