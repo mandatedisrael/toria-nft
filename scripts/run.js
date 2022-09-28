@@ -1,10 +1,20 @@
 const { hexStripZeros } = require("ethers/lib/utils")
 
 const main = async() => {
-    const nftContractFactory = await hre.ethers.getContractFactory("VictoriaNFT");
+    const nftContractFactory = await hre.ethers.getContractFactory("GrootNFT");
     const nftContract = await nftContractFactory.deploy();
     await nftContract.deployed();
     console.log("Contract deployed to: ",nftContract.address);
+
+    let txn = await nftContract.makeGrootNFT()
+    await txn.wait()
+
+
+    txn = await nftContract.makeGrootNFT()
+    await txn.wait()
+
+
+
 };
 
 const runMain = async () => {
